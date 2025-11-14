@@ -18,10 +18,11 @@ proot-distro login debian
 apt update && apt upgrade
 apt install git wget ca-certificates psmisc
 wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
-# If wget fails, get new link from https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual#scripted-install
+# If wget fails, get new link from
+# https://learn.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual#scripted-install
 chmod +x ./dotnet-install.sh
 # Arm64 is common for most android devices, change that part if your phone CPU isn't arm64
-./dotnet-install.sh --channel 8.0 --install-dir $HOME/.dotnet --architecture arm64
+./dotnet-install.sh --channel 8.0 --install-dir $HOME/.dotnet --architecture arm64 --runtime aspnetcore
 echo 'export DOTNET_ROOT=$HOME/.dotnet' >> ~/.bashrc
 echo 'export PATH=$DOTNET_ROOT:$PATH' >> ~/.bashrc
 source ~/.bashrc
@@ -38,7 +39,8 @@ Visit https://github.com/openbullet/OpenBullet2/releases/ and get the **ob2-web-
 ```
 mkdir OP2 && cd OP2
 wget https://github.com/openbullet/OpenBullet2/releases/download/0.3.2/ob2-web-updater-linux-arm64
-# If download fails with SSL error, menually download and youll find menually downloaded file in /sdcard/Download/ob2-web-updater-linux-arm64
+# If download fails with SSL error, menually download and
+# youll find menually downloaded file in /sdcard/Download/ob2-web-updater-linux-arm64
 chmod +x ob2-web-updater-linux-arm64
 ./ob2-web-updater-linux-arm64
 ```
