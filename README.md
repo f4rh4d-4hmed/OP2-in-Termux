@@ -80,3 +80,4 @@ export DOTNET_GCHeapHardLimit=0x40000000
 dotnet ~/OP2/OpenBullet2.Web.dll --urls "http://localhost:8070"
 ```
 If not connected in any network, It will be available in localhost:8070
+#Check https://docs.openbullet.dev/docs/installation/linux for more details
